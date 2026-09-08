@@ -68,9 +68,16 @@ your Supabase team. Customers would never receive their sign-in link.
 From **Project Settings → Data API**, copy the project URL and the `anon` public key. The
 anon key is designed to be public; the security policies are what protect the data.
 
-- **For the live site**: repo **Settings → Secrets and variables → Actions → Variables**, add
-  `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`. Push anything, and the deploy picks them up.
-- **For local work**: copy `.env.example` to `.env.local` and fill in the same two values.
+These live in `.env.production`, which is committed on purpose: the anon key is compiled into
+the JavaScript every visitor downloads, so hiding it in the repo would protect nothing. Row-level
+security is what protects the data. To move them out of git anyway, add `VITE_SUPABASE_URL` and
+`VITE_SUPABASE_ANON_KEY` under repo **Settings → Secrets and variables → Actions → Variables**,
+delete `.env.production`, and pass them to the build step in the workflow.
+
+The **service_role** key is a different thing entirely: it bypasses every policy in the schema.
+It must never go in this repo, the browser, or a chat window.
+
+For local work, copy `.env.example` to `.env.local` and fill in the same two values.
 
 ### 4. Make George the owner
 
