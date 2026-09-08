@@ -52,8 +52,11 @@ Easiest option, no command line, about two minutes:
 
 1. Go to the repo's **Settings → Pages**.
 2. Under **Build and deployment → Source**, choose **GitHub Actions**.
-3. That's it. The workflow runs on the next push, or start it by hand from the **Actions**
-   tab → **Deploy to GitHub Pages** → **Run workflow**.
+3. Then run the workflow: **Actions** tab → **Deploy to GitHub Pages** → **Run workflow**.
+
+Step 1 has to be done by hand. GitHub does not permit a workflow token to create the
+Pages site, so the deploy fails with "Create Pages site failed: Resource not accessible
+by integration" until the setting is switched on. After that, every push deploys itself.
 
 The live URL is `https://tlk2william-cpu.github.io/cleburneapp/` and it never changes.
 From then on, any edit pushed to the default branch is live about a minute later.
