@@ -46,12 +46,21 @@ Easiest option, no command line, about two minutes:
    Rename it to something friendlier in **Site settings → Change site name**.
 4. Text George the link.
 
+### Or: GitHub Pages, already wired up (recommended)
+
+`.github/workflows/deploy.yml` builds and publishes the site on every push. Turn it on once:
+
+1. Go to the repo's **Settings → Pages**.
+2. Under **Build and deployment → Source**, choose **GitHub Actions**.
+3. That's it. The workflow runs on the next push, or start it by hand from the **Actions**
+   tab → **Deploy to GitHub Pages** → **Run workflow**.
+
+The live URL is `https://tlk2william-cpu.github.io/cleburneapp/` and it never changes.
+From then on, any edit pushed to the default branch is live about a minute later.
+
 Other free options that work just as well:
 
 - **Vercel** — https://vercel.com/new, import the repo, framework "Vite", deploy.
-- **GitHub Pages** — push this repo, then in **Settings → Pages** deploy the `dist` folder
-  (or a `gh-pages` branch). The build already uses relative asset paths, so a
-  `username.github.io/repo/` sub-path works fine.
 - **Cloudflare Pages** — connect the repo, build command `npm run build`, output `dist`.
 
 The app must be served over **https** for the home-screen install and offline cache to work.
