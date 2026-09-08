@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Cleburne Cafeteria">
+  <rect width="512" height="512" rx="112" fill="#1B7A43"/>
+  <circle cx="256" cy="268" r="150" fill="none" stroke="#FFFFFF" stroke-width="16" opacity="0.55"/>
+  <text x="256" y="330" font-family="Georgia, 'Times New Roman', serif" font-size="240" font-weight="700"
+        fill="#FFFFFF" text-anchor="middle">C</text>
+  <path d="M96 96v70a26 26 0 0 0 52 0V96" fill="none" stroke="#F5B301" stroke-width="14" stroke-linecap="round"/>
+  <path d="M122 96v130" stroke="#F5B301" stroke-width="14" stroke-linecap="round"/>
+  <path d="M390 96c26 0 34 26 34 56s-14 44-30 44h-4v30" fill="none" stroke="#F5B301" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
